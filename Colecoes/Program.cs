@@ -6,8 +6,8 @@ int[] array = new int[5] {6, 3, 8, 1, 90};
 System.Console.WriteLine("Array original: ");
 op.ImprimirArray(array);
 
-op.OrdenarBubbleSort(ref array);
-
+// op.OrdenarBubbleSort(ref array);
+op.Ordenar(ref array);
 
 System.Console.WriteLine("Array ordenado:");
 op.ImprimirArray(array);
