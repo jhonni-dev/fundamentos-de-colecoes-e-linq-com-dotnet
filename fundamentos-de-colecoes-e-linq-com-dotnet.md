@@ -18,3 +18,8 @@
   + Se tentar acessar um elemento que não exite, o intelisense não acusará o erro mas o compilador sim.
   + Para percorrer um array sem exceder o seu limite, é recomendado usar o .length
 + **Array Multidimensional:** é um array composto de linhas e colunas, também conhecido como matriz
+
+## Aula 2
+### Manipulando Arrays
++ **Ordenando Arrays:** Para ordenar um array, existem diversos algoritmos de ordenação e diferentes técnicas e casos a serem considerados.
++ **Bubble sort:** 
