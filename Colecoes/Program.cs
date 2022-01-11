@@ -2,9 +2,20 @@
 
 OperacoesArray op = new OperacoesArray();
 
-int[] array = new int[5] {6, 3, 8, 1, 90};
+int[] array = new int[5] {6, 3, 8, 1, 9};
 int [] arrayCopia = new int[10];
 
+int valorProcurado = 7;
+bool existe = op.Existe(array, valorProcurado);
+
+if(existe)
+{
+    System.Console.WriteLine("Encontrei o valor {0}", valorProcurado);
+}
+else
+{
+    System.Console.WriteLine("Não encontrei o valor {0}", valorProcurado);
+}
 // System.Console.WriteLine("Array original: ");
 // op.ImprimirArray(array);
 
@@ -14,12 +25,12 @@ int [] arrayCopia = new int[10];
 // System.Console.WriteLine("Array ordenado:");
 // op.ImprimirArray(array);
 
-System.Console.WriteLine("Array antes da cópia: ");
-op.ImprimirArray(arrayCopia);
+// System.Console.WriteLine("Array antes da cópia: ");
+// op.ImprimirArray(arrayCopia);
 
-op.Copiar(ref array, ref arrayCopia);
-System.Console.WriteLine("Array após a cópia: ");
-op.ImprimirArray(arrayCopia);
+// op.Copiar(ref array, ref arrayCopia);
+// System.Console.WriteLine("Array após a cópia: ");
+// op.ImprimirArray(arrayCopia);
 
 // int[,] matriz = new int [4, 2] 
 // {
