@@ -5,18 +5,25 @@ OperacoesArray op = new OperacoesArray();
 int[] array = new int[5] {6, 3, 8, 1, 9};
 int [] arrayCopia = new int[10];
 
-int valorProcurado = 8;
+// int valorProcurado = 8;
 
-int indice = op.ObterIndice(array, valorProcurado);
+System.Console.WriteLine($"Capaciade atual do array: {array.Length}");
+op.RedimensionarArray(ref array, array.Length * 2);
 
-if (indice > -1)
-{
-    System.Console.WriteLine($"O índice do elemento {valorProcurado} é {indice}");
-}
-else
-{
-    System.Console.WriteLine("Valor inexistente no array");
-}
+System.Console.WriteLine($"Capaciade do array após redimensionamento: {array.Length}");
+System.Console.WriteLine("Array redimensionado:");
+op.ImprimirArray(array);
+
+// int indice = op.ObterIndice(array, valorProcurado);
+
+// if (indice > -1)
+// {
+//     System.Console.WriteLine($"O índice do elemento {valorProcurado} é {indice}");
+// }
+// else
+// {
+//     System.Console.WriteLine("Valor inexistente no array");
+// }
 
 // int valorAchado = op.ObterValor(array, valorProcurado);
 
