@@ -1,19 +1,37 @@
-﻿using Colecoes.Helper;
+﻿List<string> estados = new List<string>();
+estados.Add("SP");
+estados.Add("MG");
+estados.Add("CE");
 
-OperacoesArray op = new OperacoesArray();
+System.Console.WriteLine($"Quantidade de elementos na lista: {estados.Count}");
 
-int[] array = new int[5] {6, 3, 8, 1, 9};
-int [] arrayCopia = new int[10];
-string[] arrayString = op.ConverterParaArrayString(array);
+foreach (var item in estados)
+{
+    System.Console.WriteLine(item);
+}
 
-// int valorProcurado = 8;
+for (int i = 0; i < estados.Count; i++)
+{
+    System.Console.WriteLine($"Índice {i}, Valor: {estados[i]}");
+}
 
-System.Console.WriteLine($"Capaciade atual do array: {array.Length}");
-op.RedimensionarArray(ref array, array.Length * 2);
 
-System.Console.WriteLine($"Capaciade do array após redimensionamento: {array.Length}");
-System.Console.WriteLine("Array redimensionado:");
-op.ImprimirArray(array);
+// using Colecoes.Helper;
+
+// OperacoesArray op = new OperacoesArray();
+
+// int[] array = new int[5] {6, 3, 8, 1, 9};
+// int [] arrayCopia = new int[10];
+// string[] arrayString = op.ConverterParaArrayString(array);
+
+// // int valorProcurado = 8;
+
+// System.Console.WriteLine($"Capaciade atual do array: {array.Length}");
+// op.RedimensionarArray(ref array, array.Length * 2);
+
+// System.Console.WriteLine($"Capaciade do array após redimensionamento: {array.Length}");
+// System.Console.WriteLine("Array redimensionado:");
+// op.ImprimirArray(array);
 
 // int indice = op.ObterIndice(array, valorProcurado);
 
