@@ -1,17 +1,17 @@
 ﻿using Colecoes.Helper;
 
 OperacoesLista opLista = new OperacoesLista();
-List<string> estados = new List<string>();
-estados.Add("SP");
-estados.Add("MG");
-estados.Add("CE");
+List<string> estados = new List<string> {"SP", "MG", "BA"};
+string[] estadosArray = new string[2] {"SC", "MT"};
 
 System.Console.WriteLine($"Quantidade de elementos na lista: {estados.Count}");
 
 opLista.ImprimirListaString(estados);
 
-System.Console.WriteLine("Removendo o elemento:");
-estados.Remove("MG");
+// System.Console.WriteLine("Removendo o elemento:");
+// estados.Remove("MG");
+
+estados.AddRange(estadosArray);
 
 opLista.ImprimirListaString(estados);
 
