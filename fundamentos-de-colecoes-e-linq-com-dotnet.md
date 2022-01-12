@@ -36,3 +36,44 @@
   + **Array.IndexOf:** recebe diretamente o valor e vai sempre procurar por uma condição de igualdade
   + **Array.Resize:** redimensiona a capacidade do array
   + **Array.ConvertAll:** converte um tipo de array para outro através de um predicate
+
+## Aula 3
+### Coleções Genéricas
++ No C# existem classes de coleções que agrupam valores e essas classes são padronizadas para as operações mais comuns, como:
+  + Ordenação
+  + Obter valor por índice
+  + Obter valor com expressões
+  + Trabalhar com tamanhos dinâmicos
++ Você pode criar uma coleção genérica usando uma das classes no namespace **System.Collections.Generic**. Uma coleção genérica é útil quando cada item na coleção tem o mesmo tipo de dados. Uma coleção gnérica impõe tipagem forte, permitindo que apenas o tipo de dados desejado seja adicionado.
++ Para declarar uma lista usa-se **List\<T>** onde T representa o tipo de dados que queremos (a barra não faz parte do comando).
+  + Exemplo: List\<strin> estados = new List\<string>(); (as barras não fazem parte)
++ Para adicionar um elemento na lista basta inserir o nome da lista.**Add()**;
++ **.Count:** retorna o número de elementos da lista
++ Para percorrer os elementos da lista usa-se o **foreach** ou **for**
++ **Remover itens**
++ Quando removemos um item de uma lista, esta automaticamente reorganiza os itens e redimensiona o array
+  + **Remove():** para remover um único elemento na lista e retorna um booleano informando se deu certo ou não
+  + **RemoveAll():** passa um predicate para o método para que ele possa remover um ou mais elementos
+  + **RemoveAt():** remove um elemento baseado no seu índice
+  + **RemoveRange():** remove elementos baseado no index de acordo com o range informado
++ **Adicionar coleções na lista**
++ **.AddRange():** adiciona elementos entre coleções do mesmo tipo. A coleção adicionada sera colocada no final da coleção de destino
++ **.Insert():** O primeiro parâmetro é o índice que será ocupado e o segundo parâmetro é o elementro a ser inserido
+
+## Aula 4
+### Coleções Específicas
++ As coleções específicas implementam regras para sua ordem de acesso e manipulação de seus elementos. São elas:
+  + **Queue (Fila):**  obedece a ordem FIFO, portanto não é possível inserir ou remover elementos através de um índice
+  + Para percorrer a fila e ler os elementos utiliza-se o *while*
+    + **Queue\<T>:** onde T é o tipo de dado que irá compor a fila. É possível definir os elementos da fila em sua inicialização
+      + Exemplo: Queue\<string> fila = new Queue\<string> fila()
+    + **.Enqueue():** adiciona elemento a fila
+    + **.Dequeue():** remove e retorna o objeto atual no começo de sua fila
+    + **.Peek():** retorna o objeto do começo de sua fila sem removê-lo
+    + **.Count():** retorna a quantidade de elementos presentes na fila
+  + **Stack (Pilha):** obedece a ordem LIFO, portanto não é possível inserir ou remover elementos através de um índice
+    + **Stack\<T>:** onde T é o tipo de dado que irá compor a pilha. É possível definir os elementos da pilha em sua inicialização
+    + **.Push():** insere elementos no topo da pilha
+    + **.Pop():** remove elemento do topo da pilha
+    + **.Peek():** retorna o último objeto da pilha sem removê-lo
+    + **.Count():** retorna a quantidade de elementos presentes na pilha
