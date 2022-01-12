@@ -1,20 +1,19 @@
-﻿List<string> estados = new List<string>();
+﻿using Colecoes.Helper;
+
+OperacoesLista opLista = new OperacoesLista();
+List<string> estados = new List<string>();
 estados.Add("SP");
 estados.Add("MG");
 estados.Add("CE");
 
 System.Console.WriteLine($"Quantidade de elementos na lista: {estados.Count}");
 
-foreach (var item in estados)
-{
-    System.Console.WriteLine(item);
-}
+opLista.ImprimirListaString(estados);
 
-for (int i = 0; i < estados.Count; i++)
-{
-    System.Console.WriteLine($"Índice {i}, Valor: {estados[i]}");
-}
+System.Console.WriteLine("Removendo o elemento:");
+estados.Remove("MG");
 
+opLista.ImprimirListaString(estados);
 
 // using Colecoes.Helper;
 
