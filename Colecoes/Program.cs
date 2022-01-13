@@ -1,18 +1,30 @@
-﻿Stack<string> pilhaLivros = new Stack<string>();
+﻿Dictionary<string,string> estados = new Dictionary<string, string>();
 
-pilhaLivros.Push(".NET");
-pilhaLivros.Push(".DDD");
-pilhaLivros.Push("Código Limpo");
+estados.Add("SP", "São Paulo");
+estados.Add("MG", "Minas Gerais");
+estados.Add("BA", "Bahia");
 
-System.Console.WriteLine($"Livros para leitura: {pilhaLivros.Count}");
-
-while (pilhaLivros.Count > 0)
+foreach (KeyValuePair<string, string> item in estados)
 {
-     System.Console.WriteLine($"Próximo livro para leitura: {pilhaLivros.Peek()}");
-     System.Console.WriteLine($"{pilhaLivros.Pop()} lido com sucesso");
+    System.Console.WriteLine($"Chave: {item.Key} | Valor: {item.Value}");
 }
 
-System.Console.WriteLine($"Livros para leitura {pilhaLivros.Count}");
+
+// Stack<string> pilhaLivros = new Stack<string>();
+
+// pilhaLivros.Push(".NET");
+// pilhaLivros.Push(".DDD");
+// pilhaLivros.Push("Código Limpo");
+
+// System.Console.WriteLine($"Livros para leitura: {pilhaLivros.Count}");
+
+// while (pilhaLivros.Count > 0)
+// {
+//      System.Console.WriteLine($"Próximo livro para leitura: {pilhaLivros.Peek()}");
+//      System.Console.WriteLine($"{pilhaLivros.Pop()} lido com sucesso");
+// }
+
+// System.Console.WriteLine($"Livros para leitura {pilhaLivros.Count}");
 
 
 // Queue<string> fila = new Queue<string>();
