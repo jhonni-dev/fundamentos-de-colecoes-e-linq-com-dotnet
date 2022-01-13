@@ -77,3 +77,23 @@
     + **.Pop():** remove elemento do topo da pilha
     + **.Peek():** retorna o último objeto da pilha sem removê-lo
     + **.Count():** retorna a quantidade de elementos presentes na pilha
+
+## Aula 5
+### Dicionários
++ Um dicionário é uma coleção de chave e valor, permitindo que vocÊ recupere rapidamente seus itens baseado em sua chave
++ O dicionário armazena a sua chave em hash
++ Não é possível existir chaves repetidas, entretanto é possível duplicar valores
++ Se tentar acessar uma chave que não existe, o programa retorna um erro e interrompe a execução
++ Exemplo de um dicionário:
+  + Dictionary<string,string> estados = new Dicitionary<string,string>();
++ **.Add():** adiciona um par chave, valor do tipo indicado na criação do dicionário
++ Para **percorrer** um dicionário usa-se o _foreach(KeyValuePair<>item in colection)_
+  + **item.Key:** para acessar a chave
+  + **item.Value:** para acessar o valor
++ Para **acessar** um valor é preciso passar a chave com o nome do dicionário: 
+  + string valorProcurado = "BA";
+  + Console.WriteLine(estados[valorProcurado]);
++ Para **atualizar** um valor basta passarmos um sinal de = após inserir a chave a ser atualizada
+  + Exemplo: estados[valorProcurado] = "BA - Teste de atualização"
++ Para **remover** um valor utiliza-se o método .Remove passando a chave que se quer remover
++ Para **acessar um valor de maneira segura** utiliza-se o método .TryGetValue que obtém o valor desejado e diz se conseguiu obter o valor ou não
