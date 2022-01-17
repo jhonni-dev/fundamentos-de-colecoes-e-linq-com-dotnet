@@ -97,3 +97,15 @@
   + Exemplo: estados[valorProcurado] = "BA - Teste de atualização"
 + Para **remover** um valor utiliza-se o método .Remove passando a chave que se quer remover
 + Para **acessar um valor de maneira segura** utiliza-se o método .TryGetValue que obtém o valor desejado e diz se conseguiu obter o valor ou não
+
+## Aula 6
+### LINQ
++ O Language-Integrated Query (LINQ) é uma maneira de você utilizar uma sintaxe de consulta padronizada para coleções de objetos
++ Na prática, é uma maneira de fazer operações nas coleções de uma maneira padronizada utilizando as cláusulas mais comuns
++ O LINQ pode ser integrado a qualquer coleção, como array, lista, data source...
++ É possível utilizar o LINQ através de **QUerry Syntax** ou **Method Syyntax**
++ Obter o menor elemento: **.Min()**
++ Obter o maior elemento: **.Max()**
++ Obter a média dos valores: **.Average()**
++ **SOMA:** .Sum()
++ **Distinct (elementos únicos sem repetição):** .Distinct().ToArray();
