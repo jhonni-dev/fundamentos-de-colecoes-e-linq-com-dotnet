@@ -1,17 +1,26 @@
-﻿int[] arrayNumeros = new int[5] {1,4,8,15,19};
+﻿int[] arrayNumeros = new int[7] {100,1,4,0,8,15,19};
 
-// Query Syntax
-var numerosParesQuery =
-        from num in arrayNumeros
-        where num % 2 == 0
-        orderby num
-        select num;
+var minimo = arrayNumeros.Min();
+var maximo = arrayNumeros.Max();
+var medio = arrayNumeros.Average();
 
-// Method Syntax
-var numerosParesMetodo = arrayNumeros.Where(x => x % 2 == 0).OrderBy(x => x).ToList();
+System.Console.WriteLine($"Mínimo: {minimo}");
+System.Console.WriteLine($"Máximo: {maximo}");
+System.Console.WriteLine($"Médio: {medio}");
 
-System.Console.WriteLine("Números Pares Query: " + string.Join(", ", numerosParesQuery));
-System.Console.WriteLine("Números Pares Método: " + string.Join(", ", numerosParesMetodo));
+
+// // Query Syntax
+// var numerosParesQuery =
+//         from num in arrayNumeros
+//         where num % 2 == 0
+//         orderby num
+//         select num;
+
+// // Method Syntax
+// var numerosParesMetodo = arrayNumeros.Where(x => x % 2 == 0).OrderBy(x => x).ToList();
+
+// System.Console.WriteLine("Números Pares Query: " + string.Join(", ", numerosParesQuery));
+// System.Console.WriteLine("Números Pares Método: " + string.Join(", ", numerosParesMetodo));
 
 // Dictionary<string,string> estados = new Dictionary<string, string>();
 
