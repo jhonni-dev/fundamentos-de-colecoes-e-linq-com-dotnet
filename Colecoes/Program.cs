@@ -1,12 +1,19 @@
-﻿int[] arrayNumeros = new int[7] {100,1,4,0,8,15,19};
+﻿int[] arrayNumeros = new int[10] {100,1,4,0,8,15,19,19,4,100};
 
 var minimo = arrayNumeros.Min();
 var maximo = arrayNumeros.Max();
 var medio = arrayNumeros.Average();
+var soma = arrayNumeros.Sum();
+var arrayUnico = arrayNumeros.Distinct().ToArray();
 
-System.Console.WriteLine($"Mínimo: {minimo}");
-System.Console.WriteLine($"Máximo: {maximo}");
-System.Console.WriteLine($"Médio: {medio}");
+System.Console.WriteLine($"Soma: {soma}");
+System.Console.WriteLine($"Array original: "+ string.Join(", ", arrayNumeros));
+System.Console.WriteLine($"Array distinto: "+ string.Join(", ", arrayUnico));
+
+
+// System.Console.WriteLine($"Mínimo: {minimo}");
+// System.Console.WriteLine($"Máximo: {maximo}");
+// System.Console.WriteLine($"Médio: {medio}");
 
 
 // // Query Syntax
