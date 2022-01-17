@@ -1,26 +1,41 @@
-﻿Dictionary<string,string> estados = new Dictionary<string, string>();
+﻿int[] arrayNumeros = new int[5] {1,4,8,15,19};
 
-estados.Add("SP", "São Paulo");
-estados.Add("MG", "Minas Gerais");
-estados.Add("BA", "Bahia");
+// Query Syntax
+var numerosParesQuery =
+        from num in arrayNumeros
+        where num % 2 == 0
+        orderby num
+        select num;
 
-foreach (KeyValuePair<string, string> item in estados)
-{
-    // System.Console.WriteLine($"Chave: {item.Key} | Valor: {item.Value}");
-}
+// Method Syntax
+var numerosParesMetodo = arrayNumeros.Where(x => x % 2 == 0).OrderBy(x => x).ToList();
+
+System.Console.WriteLine("Números Pares Query: " + string.Join(", ", numerosParesQuery));
+System.Console.WriteLine("Números Pares Método: " + string.Join(", ", numerosParesMetodo));
+
+// Dictionary<string,string> estados = new Dictionary<string, string>();
+
+// estados.Add("SP", "São Paulo");
+// estados.Add("MG", "Minas Gerais");
+// estados.Add("BA", "Bahia");
+
+// foreach (KeyValuePair<string, string> item in estados)
+// {
+//     // System.Console.WriteLine($"Chave: {item.Key} | Valor: {item.Value}");
+// }
 
 
-string valorProcurado = "SC";
-// var teste = estados["SC"]; // linha para gerar erro proposital
+// string valorProcurado = "SC";
+// // var teste = estados["SC"]; // linha para gerar erro proposital
 
-if (estados.TryGetValue(valorProcurado, out string? estadoEncontrado))
-{
-     System.Console.WriteLine(estadoEncontrado);
-}
-else
-{
-    System.Console.WriteLine($"Chave {valorProcurado} não existe no dicionário.");
-}
+// if (estados.TryGetValue(valorProcurado, out string? estadoEncontrado))
+// {
+//      System.Console.WriteLine(estadoEncontrado);
+// }
+// else
+// {
+//     System.Console.WriteLine($"Chave {valorProcurado} não existe no dicionário.");
+// }
 
 // System.Console.WriteLine($"Removendo a chave {valorProcurado}");
 
