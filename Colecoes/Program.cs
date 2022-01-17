@@ -6,19 +6,30 @@ estados.Add("BA", "Bahia");
 
 foreach (KeyValuePair<string, string> item in estados)
 {
-    System.Console.WriteLine($"Chave: {item.Key} | Valor: {item.Value}");
+    // System.Console.WriteLine($"Chave: {item.Key} | Valor: {item.Value}");
 }
 
 
-string valorProcurado = "BA";
-System.Console.WriteLine($"Removendo a chave {valorProcurado}");
+string valorProcurado = "SC";
+// var teste = estados["SC"]; // linha para gerar erro proposital
 
-estados.Remove(valorProcurado);
-
-foreach (KeyValuePair<string, string> item in estados)
+if (estados.TryGetValue(valorProcurado, out string? estadoEncontrado))
 {
-    System.Console.WriteLine($"Chave: {item.Key} | Valor: {item.Value}");
+     System.Console.WriteLine(estadoEncontrado);
 }
+else
+{
+    System.Console.WriteLine($"Chave {valorProcurado} não existe no dicionário.");
+}
+
+// System.Console.WriteLine($"Removendo a chave {valorProcurado}");
+
+// estados.Remove(valorProcurado);
+
+// foreach (KeyValuePair<string, string> item in estados)
+// {
+//     System.Console.WriteLine($"Chave: {item.Key} | Valor: {item.Value}");
+// }
 
 
 // System.Console.WriteLine("Valor original:");
